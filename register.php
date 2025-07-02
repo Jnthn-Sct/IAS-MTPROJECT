@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($stmt->execute()) {
             $_SESSION['user_email'] = $email;
-            header("Location: login.php");
+            header("Location: index.php");
             exit();
         } else {
             $errors[] = "Registration failed. Please try again.";
@@ -216,7 +216,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <button type="submit">Sign Up</button>
                 <div class="login-link">
-                    Have an account? <a href="login.php">Log in</a>
+                    Have an account? <a href="index.php">Log in</a>
                 </div>
             </form>
         </div>
